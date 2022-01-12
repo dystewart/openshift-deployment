@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reloader-reloader
+spec:
+  template:
+    spec:
+      securityContext: NULL
+      containers:
+        - image: quay.io/dystewar/reloader:v0.0.104
+          name: reloader-reloader
